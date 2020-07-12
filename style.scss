@@ -11,6 +11,7 @@
 // Load Mixin Libraries for responsiveness and styling shortcuts
 @use 'modules/mixins';
 @use 'modules/nav';
+@use 'modules/animations';
 
 // Mobile Design for Menu 
 * {
@@ -127,57 +128,5 @@ body {
 
   @include Responsive("Tablet") {
     padding: 0 25px;
-  }
-}
-
-
-// Animation Keyframes
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
