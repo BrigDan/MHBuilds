@@ -99,7 +99,7 @@ nav {
 
 .menu li a{
   @include centerObject(row);
-  padding: 7px 0 7px 0;
+  padding: 10px 0 10px 0;
     width: 100%;
     opacity: 0.2;
     transition: transform .2s; /* Animation */
@@ -118,7 +118,7 @@ nav {
     flex: 1;
     order: 1;
     flex: 0 0 100%; /* flex-grow, flex-shrink, flex-basis */
-    padding:0px 80% 0px 0px;
+    padding:0px 85% 0px 0px;
     font-size: 20px;
     color: #eee;
 
@@ -156,7 +156,7 @@ li{
 .active .weapon{
     @include centerObject(row);
     // Amount of boxes, 2 per page
-    width: 50%%;
+    width: 50%;
     background: #222222;
     z-index: 1;
     
@@ -223,7 +223,7 @@ a:hover,.weapon a:hover::after {
       font-size: 5em;
     }
     @include Responsive("Desktop") {
-        font-size: 8sem;
+        font-size: 8em;
     }
 }
 
@@ -235,10 +235,13 @@ a:hover,.weapon a:hover::after {
     font-family: monsterhunter;
     font-size: 1.9em;
     padding: 25px 0px;
-    height: 25%;
+    height: 30%;
     text-shadow: 1px 1px #222;
     z-index: -1;
 
+    @include Responsive("Tablet"){
+      height: 35%;
+    }
     @include Responsive("Desktop") {
         font-size: 2em;
     }
