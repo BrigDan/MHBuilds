@@ -1,4 +1,9 @@
 // Animation Keyframes
+
+@mixin fadein($time) {
+  animation: fadeIn $time;
+}
+
 @keyframes fadeIn {
     0% {
       opacity: 0;
