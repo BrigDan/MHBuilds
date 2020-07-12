@@ -217,7 +217,7 @@ a:hover,.weapon a:hover::after {
 }
 
 .sub-text{
-  @include neonButton(rgb(77, 214, 100),rgb(80, 251, 109), 25px)
+  @include neonButton(rgb(77, 214, 100),rgb(80, 251, 109), 0px)
 }
 
 .sub-text-para{
