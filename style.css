@@ -33,6 +33,12 @@ nav {
   }
 }
 
+@media only screen and (min-width: 3200px) {
+  nav {
+    height: 72px;
+  }
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,16 +177,42 @@ a:hover, .weapon a:hover::after {
   overflow: hidden;
 }
 
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 @media only screen and (max-width: 480px) {
   .about {
     display: none;
   }
 }
 
+@media only screen and (max-width: 799px) {
+  .about {
+    display: block;
+    height: 320px;
+  }
+}
+
 @media only screen and (min-width: 800px) {
   .about {
     display: block;
-    height: 500px;
+    height: 250px;
   }
 }
 
@@ -200,21 +232,52 @@ a:hover, .weapon a:hover::after {
   }
 }
 
-.sub-text {
+.sub-text, .sub-text-para {
   -webkit-filter: drop-shadow(1px 7px 2px #222);
           filter: drop-shadow(1px 7px 2px #222);
+  width: 100%;
   overflow: hidden;
   text-align: center;
   position: relative;
   font-family: monsterhunter;
   font-size: 2em;
-  padding-top: 20px;
+  padding: 25px 0px;
+  height: 35%;
   z-index: -1;
 }
 
 @media only screen and (min-width: 800px) {
-  .sub-text {
+  .sub-text, .sub-text-para {
     font-size: 2.2em;
   }
+}
+
+.sub-text {
+  background-color: #4dd664;
+  -webkit-box-shadow: 0 0 25px #50fb6d;
+          box-shadow: 0 0 25px #50fb6d;
+}
+
+.sub-text-para {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 0 25px;
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+  height: 70%;
+  font-size: 1.19em;
 }
 /*# sourceMappingURL=style.css.map */
