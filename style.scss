@@ -17,6 +17,10 @@
     justify-content: center;
   }
 
+@mixin fadein($time){
+  animation: fadeIn $time;
+}
+
 @mixin neonButton($backcol, $boxshadow, $boxwidth) {
   background-color: $backcol;
   box-shadow: 0 0 $boxwidth $boxshadow;
@@ -31,11 +35,11 @@
       }
     }
     @if $type == Desktop {
-      @media only screen and (min-width: 800px) {
+      @media only screen and (min-width: 750px) {
         @content;
       }
     } @else if $type == Tablet {
-      @media only screen and (max-width: 799px) {
+      @media only screen and (max-width: 749px) and (min-width: 481px) {
         @content;
       }
     } @else if $type == Mobile {
@@ -127,7 +131,9 @@ li{
     order: 3;
     width: 100%;
     text-align: center;
-
+    @include Responsive("Mobile"){
+      display: none;
+    }    
     @include Responsive("Tablet"){
       display: none;
     }
@@ -151,6 +157,8 @@ a:hover,.weapon a:hover::after {
 /* Mobile Image */
 
 .header{
+    @include fadein(5s);
+
     position: relative;
     background: url(img/desktop-frontpage.jpg) no-repeat center fixed;
     background-size: cover;
@@ -172,6 +180,7 @@ a:hover,.weapon a:hover::after {
 
 .about{
     @include centerObject(column);
+
     justify-content: flex-start;
     @include Responsive("Mobile"){
         display: none;
@@ -191,15 +200,21 @@ a:hover,.weapon a:hover::after {
     overflow: hidden;
     height: 130px;
     font-family: monsterhunter;
-    font-size: 3.5em;
     z-index: -1;
 
+    @include Responsive("Mobile"){
+      font-size: 3em;
+    }
+    @include Responsive("Tablet"){
+      font-size: 5em;
+    }
     @include Responsive("Desktop") {
-        font-size: 8em;
+        font-size: 10em;
     }
 }
 
 .sub-text, .sub-text-para{
+
     width: 100%;
     overflow: hidden;
     text-align: center;
@@ -228,4 +243,51 @@ a:hover,.weapon a:hover::after {
   text-align: center;
   height: 70%;
   font-size: 1.19em;
+}
+
+
+// Animation Keyframes
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }

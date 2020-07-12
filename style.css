@@ -27,7 +27,7 @@ nav {
   background: #222222;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 750px) {
   nav {
     position: fixed;
   }
@@ -50,7 +50,7 @@ nav {
   width: 100%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 750px) {
   .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -92,7 +92,7 @@ nav {
   color: #eee;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 750px) {
   .toggle, .toggle i {
     display: none;
   }
@@ -127,7 +127,13 @@ li {
   text-align: center;
 }
 
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 480px) {
+  .weapon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 749px) and (min-width: 481px) {
   .weapon {
     display: none;
   }
@@ -145,6 +151,8 @@ a:hover, .weapon a:hover::after {
 
 /* Mobile Image */
 .header {
+  -webkit-animation: fadeIn 5s;
+          animation: fadeIn 5s;
   position: relative;
   background: url(img/desktop-frontpage.jpg) no-repeat center fixed;
   background-size: cover;
@@ -152,7 +160,7 @@ a:hover, .weapon a:hover::after {
   z-index: -2;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 750px) {
   .header {
     height: 100vh;
   }
@@ -202,14 +210,14 @@ a:hover, .weapon a:hover::after {
   }
 }
 
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 749px) and (min-width: 481px) {
   .about {
     display: block;
     height: 320px;
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 750px) {
   .about {
     display: block;
     height: 250px;
@@ -222,13 +230,24 @@ a:hover, .weapon a:hover::after {
   overflow: hidden;
   height: 130px;
   font-family: monsterhunter;
-  font-size: 3.5em;
   z-index: -1;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (max-width: 480px) {
   .logo-text {
-    font-size: 8em;
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 749px) and (min-width: 481px) {
+  .logo-text {
+    font-size: 5em;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .logo-text {
+    font-size: 10em;
   }
 }
 
@@ -245,7 +264,7 @@ a:hover, .weapon a:hover::after {
   z-index: -1;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 750px) {
   .sub-text, .sub-text-para {
     font-size: 2.2em;
   }
@@ -278,5 +297,23 @@ a:hover, .weapon a:hover::after {
   text-align: center;
   height: 70%;
   font-size: 1.19em;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
