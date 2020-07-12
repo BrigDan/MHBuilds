@@ -110,7 +110,8 @@ nav {
   }
 }
 
-.toggle, .toggle i {
+.toggle,
+.toggle i {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -127,7 +128,8 @@ nav {
 }
 
 @media only screen and (min-width: 750px) {
-  .toggle, .toggle i {
+  .toggle,
+  .toggle i {
     display: none;
   }
 }
@@ -192,7 +194,8 @@ li {
   z-index: 1;
 }
 
-a:hover, .weapon a:hover::after {
+a:hover,
+.weapon a:hover::after {
   color: #ccc;
 }
 
@@ -213,7 +216,8 @@ a:hover, .weapon a:hover::after {
   }
 }
 
-.logo, .about {
+.logo,
+.about {
   /* Header text */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,7 +304,8 @@ a:hover, .weapon a:hover::after {
   }
 }
 
-.sub-text, .sub-text-para {
+.sub-text,
+.sub-text-para {
   width: 100%;
   overflow: hidden;
   text-align: center;
@@ -314,13 +319,15 @@ a:hover, .weapon a:hover::after {
 }
 
 @media only screen and (max-width: 749px) and (min-width: 481px) {
-  .sub-text, .sub-text-para {
+  .sub-text,
+  .sub-text-para {
     height: 35%;
   }
 }
 
 @media only screen and (min-width: 750px) {
-  .sub-text, .sub-text-para {
+  .sub-text,
+  .sub-text-para {
     font-size: 2em;
   }
 }

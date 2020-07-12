@@ -1,0 +1,60 @@
+
+// Mix-ins for responsiveness and centering using flexbox 
+
+@mixin centerObject($dir) {
+    display: flex;
+    flex-direction: ($dir);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin fadein($time) {
+    animation: fadeIn $time;
+  }
+  
+  @mixin neonButton($backcol, $boxshadow, $boxwidth) {
+    background-color: $backcol;
+    box-shadow: 0 0 $boxwidth $boxshadow;
+  }
+  
+  
+  @mixin Responsive($type) {
+  
+    // Width Classification
+    @if $type==HiDPI {
+      @media only screen and (min-width: 3200px) {
+        @content;
+      }
+    }
+  
+    @if $type==Desktop {
+      @media only screen and (min-width: 750px) {
+        @content;
+      }
+    }
+  
+    @else if $type==Tablet {
+      @media only screen and (max-width: 749px) and (min-width: 481px) {
+        @content;
+      }
+    }
+  
+    @else if $type==Mobile {
+      @media only screen and (max-width: 480px) {
+        @content;
+      }
+    }
+  
+    @else if $type==width {
+      @media only screen and (min-width: 620px) {
+        @content;
+      }
+    }
+  
+    // Height Classification
+    @if $type==height {
+      @media only screen and (min-height: 820px) {
+        @content;
+      }
+    }
+  }

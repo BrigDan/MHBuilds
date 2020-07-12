@@ -1,262 +1,122 @@
 /* Importing custom made webfont */
 @font-face {
-    font-family: 'monsterhunter';
-    src: url('fonts/monsterhunter-webfont.woff2') format('woff2'),
-         url('fonts/monsterhunter-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'monsterhunter';
+  src: url('fonts/monsterhunter-webfont.woff2') format('woff2'),
+    url('fonts/monsterhunter-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
 }
 
-// Mix-ins for responsiveness and centering using flexbox 
-
-@mixin centerObject($dir) {
-    display: flex;
-    flex-direction: ($dir);
-    align-items: center;
-    justify-content: center;
-  }
-
-@mixin fadein($time){
-  animation: fadeIn $time;
-}
-
-@mixin neonButton($backcol, $boxshadow, $boxwidth) {
-  background-color: $backcol;
-  box-shadow: 0 0 $boxwidth $boxshadow;
-}
-
-
-  @mixin Responsive($type) {
-    // Width Classification
-    @if $type == HiDPI {
-      @media only screen and (min-width: 3200px) {
-        @content;
-      }
-    }
-    @if $type == Desktop {
-      @media only screen and (min-width: 750px) {
-        @content;
-      }
-    } @else if $type == Tablet {
-      @media only screen and (max-width: 749px) and (min-width: 481px) {
-        @content;
-      }
-    } @else if $type == Mobile {
-      @media only screen and (max-width: 480px) {
-        @content;
-      }
-    } @else if $type == width {
-      @media only screen and (min-width: 620px) {
-        @content;
-      }
-    }
-    // Height Classification
-    @if $type == height {
-      @media only screen and (min-height: 820px) {
-        @content;
-      }
-    }
-  }
+// Load Mixin Libraries for responsiveness and styling shortcuts
+@use 'modules/mixins';
+@use 'modules/nav';
 
 // Mobile Design for Menu 
-*{
-    box-sizing: border-box;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    background-color: #222222;
+body {
+  background-color: #222222;
 }
-
-nav {
-    display: flex;
-    width: 100%;
-    height: 55px;
-    background: #222222;
-    @include Responsive("Desktop"){
-      position: fixed;
-    }
-    @include Responsive("HiDPI"){
-      height: 72px;
-    }
-}
-
-.menu{
-    display: flex;
-    flex-wrap: wrap;
-    text-decoration: none;
-    list-style-type: none;
-    width: 100%;
-
-    @include Responsive("Desktop"){
-      @include centerObject(row);
-      flex-wrap: nowrap;
-    }
-}
-
-.menu li a{
-  @include centerObject(row);
-  padding: 6px 0 6px 0;
-    width: 100%;
-    opacity: 0.2;
-    transition: transform .2s; /* Animation */
-    transition: 0.4s;
-}
-
-.menu li a:hover {
-  @include neonButton(rgb(77, 214, 100),rgb(80, 251, 109),10px);
-  @include Responsive("Desktop"){
-    transform: scale(1.2);
-  }
-  opacity: 1;
-}
-
-.toggle, .toggle i{
-    flex: 1;
-    order: 1;
-    flex: 0 0 100%; /* flex-grow, flex-shrink, flex-basis */
-    padding:0px 85% 0px 0px;
-    font-size: 20px;
-    color: #eee;
-
-    @include Responsive("Desktop"){
-      display: none;
-    }
-}
-
-.toggle i{
-  @include centerObject(row);
-  padding: 15px;
-}
-
-li{
-    color: #eee;
-}
-
-.weapon{
-    order: 3;
-    width: 100%;
-    text-align: center;
-    @include Responsive("Mobile"){
-      display: none;
-    }    
-    @include Responsive("Tablet"){
-      display: none;
-    }
-    @include Responsive("Deskop"){
-      display: block;
-      background: #222222;
-   }
-}
-
-// Mobile menu expansion actives
-.active .weapon{
-    @include centerObject(row);
-    // Amount of boxes, 2 per page
-    width: 100%;
-    background: #222222;
-    z-index: 1;
-    
-}
-
-
-
-
-
-
-a:hover,.weapon a:hover::after {
-    color: #ccc;
-}
-
 /* Mobile Image */
 
-.header{
-    @include fadein(3s);
+.header {
+  @include fadein(3s);
 
-    position: relative;
-    background: url(img/desktop-frontpage.jpg) no-repeat center fixed;
-    background-size: cover;
-    height: 90vh;
-    z-index: -2;
-    
-    // Make the header fit the whole viewport to obscure the text
-    @include Responsive("Desktop"){
-      height: 100vh;  
-    }
+  position: relative;
+  background: url(img/desktop-frontpage.jpg) no-repeat center fixed;
+  background-size: cover;
+  height: 90vh;
+  z-index: -2;
+
+  // Make the header fit the whole viewport to obscure the text
+  @include Responsive("Desktop") {
+    height: 100vh;
+  }
 }
 
-.logo, .about{
-/* Header text */
-    @include centerObject(row);
-    color: white;
-    overflow: hidden;
+.logo,
+.about {
+  /* Header text */
+  @include centerObject(row);
+  color: white;
+  overflow: hidden;
 }
 
-.about{
-    @include centerObject(column);
+.about {
+  @include centerObject(column);
 
-    justify-content: flex-start;
-    @include Responsive("Mobile"){
-        display: none;
-    }
-    @include Responsive("Tablet"){
-        display: block;
-        height: 320px;
-    }
-    @include Responsive("Desktop"){
-        display: block;
-        height: 250px;
-    }
+  justify-content: flex-start;
+
+  @include Responsive("Mobile") {
+    display: none;
+  }
+
+  @include Responsive("Tablet") {
+    display: block;
+    height: 320px;
+  }
+
+  @include Responsive("Desktop") {
+    display: block;
+    height: 250px;
+  }
 }
 
-.logo-text{
-    @include fadein(0s);
+.logo-text {
+  @include fadein(0s);
 
-    filter: drop-shadow(1px 7px 2px #222);
-    overflow: hidden;
-    height: 130px;
-    font-family: monsterhunter;
-    z-index: -1;
+  filter: drop-shadow(1px 7px 2px #222);
+  overflow: hidden;
+  height: 130px;
+  font-family: monsterhunter;
+  z-index: -1;
 
-    @include Responsive("Mobile"){
-      font-size: 3em;
-    }
-    @include Responsive("Tablet"){
-      font-size: 5em;
-    }
-    @include Responsive("Desktop") {
-        font-size: 8em;
-    }
+  @include Responsive("Mobile") {
+    font-size: 3em;
+  }
+
+  @include Responsive("Tablet") {
+    font-size: 5em;
+  }
+
+  @include Responsive("Desktop") {
+    font-size: 8em;
+  }
 }
 
-.sub-text, .sub-text-para{
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-    position: relative;
-    font-family: monsterhunter;
-    font-size: 1.9em;
-    padding: 25px 0px;
-    height: 30%;
-    text-shadow: 1px 1px #222;
-    z-index: -1;
+.sub-text,
+.sub-text-para {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  font-family: monsterhunter;
+  font-size: 1.9em;
+  padding: 25px 0px;
+  height: 30%;
+  text-shadow: 1px 1px #222;
+  z-index: -1;
 
-    @include Responsive("Tablet"){
-      height: 35%;
-    }
-    @include Responsive("Desktop") {
-        font-size: 2em;
-    }
+  @include Responsive("Tablet") {
+    height: 35%;
+  }
+
+  @include Responsive("Desktop") {
+    font-size: 2em;
+  }
 }
 
-.sub-text{
-  @include neonButton(rgb(77, 214, 100),rgb(80, 251, 109), 0px);
+.sub-text {
+  @include neonButton(rgb(77, 214, 100), rgb(80, 251, 109), 0px);
 }
 
-.sub-text-para{
+.sub-text-para {
   @include centerObject(row);
   flex-wrap: nowrap;
   padding: 0 100px;
@@ -265,7 +125,7 @@ a:hover,.weapon a:hover::after {
   height: 70%;
   font-size: 1.19em;
 
-  @include Responsive("Tablet"){
+  @include Responsive("Tablet") {
     padding: 0 25px;
   }
 }
@@ -274,45 +134,50 @@ a:hover,.weapon a:hover::after {
 // Animation Keyframes
 @keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-moz-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-o-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
 
 @-ms-keyframes fadeIn {
   0% {
-    opacity:0;
+    opacity: 0;
   }
+
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
