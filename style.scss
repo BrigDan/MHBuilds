@@ -19,6 +19,10 @@
 
   @mixin Responsive($type) {
     // Width Classification
+    @if $type == HiDPI {
+      @media only screen and (min-width: 3200px) {
+        @content;
+      }
     @if $type == Desktop {
       @media only screen and (min-width: 800px) {
         @content;
@@ -63,6 +67,9 @@ nav {
     background: #222222;
     @include Responsive("Desktop"){
       position: fixed;
+    }
+    @include Responsive("HiDPI"){
+      height: 72px;
     }
 }
 
