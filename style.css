@@ -233,8 +233,6 @@ a:hover, .weapon a:hover::after {
 }
 
 .sub-text, .sub-text-para {
-  -webkit-filter: drop-shadow(1px 7px 2px #222);
-          filter: drop-shadow(1px 7px 2px #222);
   width: 100%;
   overflow: hidden;
   text-align: center;
@@ -243,6 +241,7 @@ a:hover, .weapon a:hover::after {
   font-size: 2em;
   padding: 25px 0px;
   height: 35%;
+  text-shadow: 1px 1px #222;
   z-index: -1;
 }
 

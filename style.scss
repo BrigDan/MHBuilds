@@ -200,7 +200,6 @@ a:hover,.weapon a:hover::after {
 }
 
 .sub-text, .sub-text-para{
-    filter: drop-shadow(1px 7px 2px #222);
     width: 100%;
     overflow: hidden;
     text-align: center;
@@ -209,6 +208,7 @@ a:hover,.weapon a:hover::after {
     font-size: 2em;
     padding: 25px 0px;
     height: 35%;
+    text-shadow: 1px 1px #222;
     z-index: -1;
 
     @include Responsive("Desktop") {
@@ -217,7 +217,7 @@ a:hover,.weapon a:hover::after {
 }
 
 .sub-text{
-  @include neonButton(rgb(77, 214, 100),rgb(80, 251, 109), 0px)
+  @include neonButton(rgb(77, 214, 100),rgb(80, 251, 109), 0px);
 }
 
 .sub-text-para{
