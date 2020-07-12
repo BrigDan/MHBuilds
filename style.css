@@ -71,8 +71,21 @@ nav {
 }
 
 .menu li a {
-  display: block;
-  padding: 10px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 7px 0 7px 0;
+  width: 100%;
   opacity: 0.2;
   -webkit-transition: -webkit-transform .2s;
   transition: -webkit-transform .2s;
@@ -87,16 +100,28 @@ nav {
   background-color: #4dd664;
   -webkit-box-shadow: 0 0 10px #50fb6d;
           box-shadow: 0 0 10px #50fb6d;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
   opacity: 1;
 }
 
+@media only screen and (min-width: 750px) {
+  .menu li a:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
 .toggle, .toggle i {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  padding: 0px 25px 0px 0px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  /* flex-grow, flex-shrink, flex-basis */
+  padding: 0px 80% 0px 0px;
   font-size: 20px;
   color: #eee;
 }
@@ -149,7 +174,20 @@ li {
 }
 
 .active .weapon {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25%;
   background: #222222;
   z-index: 1;
 }
@@ -258,7 +296,7 @@ a:hover, .weapon a:hover::after {
 
 @media only screen and (min-width: 750px) {
   .logo-text {
-    font-size: 10em;
+    font-size: 8sem;
   }
 }
 
@@ -268,16 +306,16 @@ a:hover, .weapon a:hover::after {
   text-align: center;
   position: relative;
   font-family: monsterhunter;
-  font-size: 2em;
+  font-size: 1.9em;
   padding: 25px 0px;
-  height: 35%;
+  height: 25%;
   text-shadow: 1px 1px #222;
   z-index: -1;
 }
 
 @media only screen and (min-width: 750px) {
   .sub-text, .sub-text-para {
-    font-size: 2.2em;
+    font-size: 2em;
   }
 }
 
@@ -303,11 +341,17 @@ a:hover, .weapon a:hover::after {
           justify-content: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  padding: 0 25px;
+  padding: 0 100px;
   font-family: 'Nunito Sans', sans-serif;
   text-align: center;
   height: 70%;
   font-size: 1.19em;
+}
+
+@media only screen and (max-width: 749px) and (min-width: 481px) {
+  .sub-text-para {
+    padding: 0 25px;
+  }
 }
 
 @keyframes fadeIn {
