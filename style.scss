@@ -99,7 +99,7 @@ nav {
 
 .menu li a{
   @include centerObject(row);
-  padding: 10px 0 10px 0;
+  padding: 6px 0 6px 0;
     width: 100%;
     opacity: 0.2;
     transition: transform .2s; /* Animation */
@@ -152,7 +152,7 @@ li{
    }
 }
 
-// Mobile menu expansion
+// Mobile menu expansion actives
 .active .weapon{
     @include centerObject(row);
     // Amount of boxes, 2 per page
@@ -161,6 +161,11 @@ li{
     z-index: 1;
     
 }
+
+
+
+
+
 
 a:hover,.weapon a:hover::after {
     color: #ccc;

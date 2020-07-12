@@ -84,7 +84,7 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px 0 10px 0;
+  padding: 6px 0 6px 0;
   width: 100%;
   opacity: 0.2;
   -webkit-transition: -webkit-transform .2s;
