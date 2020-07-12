@@ -41,16 +41,24 @@ nav {
       flex-wrap: wrap;
   text-decoration: none;
   list-style-type: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 100%;
 }
 
 @media only screen and (min-width: 800px) {
   .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
@@ -59,21 +67,46 @@ nav {
 .menu li a {
   display: block;
   padding: 10px 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-.toggle i {
+.menu li a:hover {
+  background-color: #4dd664;
+  -webkit-box-shadow: 0 0 10px #50fb6d;
+          box-shadow: 0 0 10px #50fb6d;
+}
+
+.toggle, .toggle i {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  padding-left: 20px 10px;
+  padding: 0px 25px 0px 0px;
   font-size: 20px;
   color: #eee;
 }
 
 @media only screen and (min-width: 800px) {
-  .toggle i {
+  .toggle, .toggle i {
     display: none;
   }
+}
+
+.toggle i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
 }
 
 li {
@@ -86,7 +119,6 @@ li {
           order: 3;
   width: 100%;
   text-align: center;
-  padding: 0px 10px;
 }
 
 @media only screen and (max-width: 799px) {
