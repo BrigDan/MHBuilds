@@ -8,10 +8,6 @@
     justify-content: center;
   }
   
-  @mixin fadein($time) {
-    animation: fadeIn $time;
-  }
-  
   @mixin neonButton($backcol, $boxshadow, $boxwidth) {
     background-color: $backcol;
     box-shadow: 0 0 $boxwidth $boxshadow;

@@ -1,4 +1,5 @@
 // Animation Keyframes
+$time: 2s;
 
 @mixin fadein($time) {
   animation: fadeIn $time;
