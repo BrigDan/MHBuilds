@@ -9,9 +9,9 @@
 }
 
 // Load Mixin Libraries for responsiveness and styling shortcuts
-@use 'modules/mixins';
-@use 'modules/nav';
-@use 'modules/animations';
+@import 'modules/mixins';
+@import 'modules/nav';
+@import 'modules/animations';
 
 // Mobile Design for Menu 
 * {
