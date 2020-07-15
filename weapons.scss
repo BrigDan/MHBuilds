@@ -47,8 +47,8 @@ h1, h2{
 }
 
 .category p, .category h2{
-    padding: 5px 10px;
-    height: 65px;
+    padding: 0px 10px;
+    height: 46px;
     text-align: center;
     color: #eee;
 
@@ -57,8 +57,15 @@ h1, h2{
 .category-description{
     flex-direction: column;
     padding: 22px 10px;
+    height: 175px;
     @include Responsive("Mobile"){
         height: 210px;
+        padding: 10px 0 0 0 ;
+        font-size: 0.9em;
+    }
+    @include Responsive("Tablet"){
+        height: 200px;
+        padding: 10px 0 0 0;
     }
 }
 .category-header img{
