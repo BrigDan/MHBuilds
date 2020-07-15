@@ -288,6 +288,18 @@ h1, h2 {
   color: #eee;
 }
 
+@media only screen and (max-width: 480px) {
+  .category h2 {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .category i {
+    font-size: 0.8em;
+  }
+}
+
 .category-description {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -317,24 +329,34 @@ h1, h2 {
   height: 50px;
 }
 
+hr {
+  height: 1px;
+}
+
 .poison {
-  height: 400px;
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #c08cc5;
           box-shadow: 0 0 3px #c08cc5;
+  height: 400px;
 }
 
 .thunder {
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #d4c963;
           box-shadow: 0 0 3px #d4c963;
+  height: 400px;
+}
+
+.raw {
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px #e2e7ec;
+          box-shadow: 0 0 3px #e2e7ec;
+  height: 400px;
 }
 
 .build {
-  display: -ms-grid;
-  display: grid;
-  padding: 0px 25px;
-  height: 250px;
+  text-align: center;
+  padding: 20px 25px 5px 25px;
 }
 
 .build li {

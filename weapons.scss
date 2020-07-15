@@ -51,7 +51,18 @@ h1, h2{
     height: 46px;
     text-align: center;
     color: #eee;
+}
 
+.category h2{
+    @include Responsive("Mobile"){
+        font-size: 1.3em;
+    }
+}
+
+.category i{
+    @include Responsive("Mobile"){
+        font-size: 0.8em;
+    }
 }
 
 .category-description{
@@ -71,23 +82,30 @@ h1, h2{
 .category-header img{
     width: 50px;
     height: 50px;
-
 }
 
+hr{
+    height: 1px;
+}
 .poison{
-    height: 400px;
     @include neonButton(rgb(37, 36, 36), rgb(192, 140, 197), 3px);
+    height: 400px
 }
 
 .thunder{
     @include neonButton(rgb(37, 36, 36), rgb(212, 201, 99), 3px);
+    height: 400px;
+}
+
+.raw{
+    @include neonButton(rgb(37, 36, 36), rgb(226, 231, 236), 3px);
+    height: 400px;   
 }
 
 
 .build{
-    display: grid;
-    padding: 0px 25px;
-    height: 250px;
+    text-align: center;
+    padding: 20px 25px 5px 25px;
 }
 .build li{
     height: 50px;
