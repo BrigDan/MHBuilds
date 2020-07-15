@@ -215,6 +215,13 @@ a:hover,
   }
 }
 
+.menu li a.selected {
+  background-color: #2ba04e;
+  -webkit-box-shadow: 0 0 0px #50fb6d;
+          box-shadow: 0 0 0px #50fb6d;
+  opacity: 0.9;
+}
+
 .category {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -262,6 +269,7 @@ a:hover,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 22px 10px;
 }
 
 .category-header img {
@@ -279,5 +287,10 @@ a:hover,
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #d4c963;
           box-shadow: 0 0 3px #d4c963;
+}
+
+.build {
+  display: -ms-grid;
+  display: grid;
 }
 /*# sourceMappingURL=weapons.css.map */
