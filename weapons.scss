@@ -1,0 +1,49 @@
+// Load Mixin Libraries for responsiveness and styling shortcuts
+@import 'modules/mixins';
+@import 'modules/base';
+@import 'modules/nav';
+@import 'modules/animations';
+
+.category{
+    @include centerObject(row);
+    padding: 50px 5px;
+    margin: 35px 20px;
+    border-radius: 10px;
+    height: 170px;
+    @include neonButton(rgb(37, 36, 36), rgba(247, 247, 247, 0.801), 3px);
+}
+
+.category h1{
+    font-family: monsterhunter;
+    font-size: 4em;
+    @include Responsive("Mobile"){
+        padding-top: 10px;
+        font-size: 2.5em;
+    }
+    color: #eee;
+}
+
+.category p, .category h2{
+    padding: 5px 10px;
+    text-align: center;
+    color: #eee;
+
+}
+
+.category-description{
+    flex-direction: column;
+}
+.category-header img{
+
+    width: 50px;
+    height: 50px;
+
+}
+
+.poison{
+    @include neonButton(rgb(37, 36, 36), rgb(192, 140, 197), 3px);
+}
+
+.thunder{
+    @include neonButton(rgb(37, 36, 36), rgb(212, 201, 99), 3px);
+}

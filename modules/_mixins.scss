@@ -1,6 +1,17 @@
 
 // Mix-ins for responsiveness and centering using flexbox 
 
+/* Importing custom made webfont */
+@font-face {
+  font-family: 'monsterhunter';
+  src: url('fonts/monsterhunter-webfont.woff2') format('woff2'),
+    url('fonts/monsterhunter-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
 @mixin centerObject($dir) {
     display: flex;
     flex-direction: ($dir);

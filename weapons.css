@@ -1,3 +1,11 @@
+/* Importing custom made webfont */
+@font-face {
+  font-family: 'monsterhunter';
+  src: url("fonts/monsterhunter-webfont.woff2") format("woff2"), url("fonts/monsterhunter-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8,14 +16,6 @@
 
 body {
   background-color: #222;
-}
-
-/* Importing custom made webfont */
-@font-face {
-  font-family: 'monsterhunter';
-  src: url("fonts/monsterhunter-webfont.woff2") format("woff2"), url("fonts/monsterhunter-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 
 nav {
@@ -215,35 +215,7 @@ a:hover,
   }
 }
 
-* {
-  height: 100%;
-}
-
-@media only screen and (min-width: 750px) {
-  .hamburger {
-    position: fixed;
-  }
-}
-
-.header {
-  -webkit-animation: fadeIn 3s;
-          animation: fadeIn 3s;
-  position: relative;
-  background: url(img/desktop-frontpage.jpg) no-repeat center fixed;
-  background-size: cover;
-  height: 90vh;
-  z-index: -2;
-}
-
-@media only screen and (min-width: 750px) {
-  .header {
-    height: 100vh;
-  }
-}
-
-.logo,
-.about {
-  /* Header text */
+.category {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,138 +229,55 @@ a:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: white;
-  overflow: hidden;
+  padding: 50px 5px;
+  margin: 35px 20px;
+  border-radius: 10px;
+  height: 170px;
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px rgba(247, 247, 247, 0.801);
+          box-shadow: 0 0 3px rgba(247, 247, 247, 0.801);
 }
 
-.about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.category h1 {
+  font-family: monsterhunter;
+  font-size: 4em;
+  color: #eee;
+}
+
+@media only screen and (max-width: 480px) {
+  .category h1 {
+    padding-top: 10px;
+    font-size: 2.5em;
+  }
+}
+
+.category p, .category h2 {
+  padding: 5px 10px;
+  text-align: center;
+  color: #eee;
+}
+
+.category-description {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
-@media only screen and (max-width: 480px) {
-  .about {
-    display: none;
-  }
+.category-header img {
+  width: 50px;
+  height: 50px;
 }
 
-@media only screen and (max-width: 749px) and (min-width: 481px) {
-  .about {
-    display: block;
-    height: 320px;
-  }
+.poison {
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px #c08cc5;
+          box-shadow: 0 0 3px #c08cc5;
 }
 
-@media only screen and (min-width: 750px) {
-  .about {
-    display: block;
-    height: 250px;
-  }
+.thunder {
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px #d4c963;
+          box-shadow: 0 0 3px #d4c963;
 }
-
-.logo-text {
-  -webkit-animation: fadeIn 0s;
-          animation: fadeIn 0s;
-  -webkit-filter: drop-shadow(1px 7px 2px #222);
-          filter: drop-shadow(1px 7px 2px #222);
-  overflow: hidden;
-  height: 130px;
-  font-family: monsterhunter;
-  z-index: -1;
-}
-
-@media only screen and (max-width: 480px) {
-  .logo-text {
-    font-size: 3em;
-  }
-}
-
-@media only screen and (max-width: 749px) and (min-width: 481px) {
-  .logo-text {
-    font-size: 5em;
-  }
-}
-
-@media only screen and (min-width: 750px) {
-  .logo-text {
-    font-size: 8em;
-  }
-}
-
-.sub-text,
-.sub-text-para {
-  width: 100%;
-  overflow: hidden;
-  text-align: center;
-  position: relative;
-  font-family: monsterhunter;
-  font-size: 1.9em;
-  padding: 25px 0px;
-  height: 30%;
-  text-shadow: 1px 1px #222;
-  z-index: -1;
-}
-
-@media only screen and (max-width: 749px) and (min-width: 481px) {
-  .sub-text,
-  .sub-text-para {
-    height: 35%;
-  }
-}
-
-@media only screen and (min-width: 750px) {
-  .sub-text,
-  .sub-text-para {
-    font-size: 2em;
-  }
-}
-
-.sub-text {
-  background-color: #4dd664;
-  -webkit-box-shadow: 0 0 0px #50fb6d;
-          box-shadow: 0 0 0px #50fb6d;
-}
-
-.sub-text-para {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  padding: 0 100px;
-  font-family: 'Nunito Sans', sans-serif;
-  text-align: center;
-  height: 70%;
-  font-size: 1.19em;
-}
-
-@media only screen and (max-width: 749px) and (min-width: 481px) {
-  .sub-text-para {
-    padding: 0 25px;
-  }
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=weapons.css.map */
