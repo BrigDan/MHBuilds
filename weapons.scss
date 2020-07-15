@@ -4,20 +4,43 @@
 @import 'modules/nav';
 @import 'modules/animations';
 
+
+.menu li a.selected{
+    @include neonButton(rgb(43, 160, 78), rgb(80, 251, 109), 0px);
+    opacity: 0.9;
+}
+
+h1, h2{
+    width: 100%;
+}
+
 .category{
-    @include centerObject(row);
-    padding: 50px 5px;
+    padding: 46px 0px;
     margin: 35px 20px;
+    height: 10%;
     border-radius: 10px;
-    height: 170px;
+    height: 15%;
     @include neonButton(rgb(37, 36, 36), rgba(247, 247, 247, 0.801), 3px);
 }
 
+.header{
+    @include centerObject(row);
+    height: 10%;
+    @include Responsive("Mobile"){
+        height: 5%;
+    }
+}
+
 .category h1{
+    width: 100%;
+    padding: 0 0 40px 0;
     font-family: monsterhunter;
     font-size: 4em;
+    text-align: center;
     @include Responsive("Mobile"){
-        padding-top: 10px;
+        font-size: 2em;
+    }
+    @include Responsive("Tablet"){
         font-size: 2.5em;
     }
     color: #eee;
@@ -25,6 +48,7 @@
 
 .category p, .category h2{
     padding: 5px 10px;
+    height: 65px;
     text-align: center;
     color: #eee;
 
@@ -32,18 +56,34 @@
 
 .category-description{
     flex-direction: column;
+    padding: 22px 10px;
+    @include Responsive("Mobile"){
+        height: 210px;
+    }
 }
 .category-header img{
-
     width: 50px;
     height: 50px;
 
 }
 
 .poison{
+    height: 400px;
     @include neonButton(rgb(37, 36, 36), rgb(192, 140, 197), 3px);
 }
 
 .thunder{
     @include neonButton(rgb(37, 36, 36), rgb(212, 201, 99), 3px);
+}
+
+
+.build{
+    display: grid;
+    padding: 0px 25px;
+    height: 250px;
+}
+.build li{
+    height: 50px;
+    text-decoration: none;
+    list-style-type: none;
 }

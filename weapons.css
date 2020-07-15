@@ -222,7 +222,22 @@ a:hover,
   opacity: 0.9;
 }
 
+h1, h2 {
+  width: 100%;
+}
+
 .category {
+  padding: 46px 0px;
+  margin: 35px 20px;
+  height: 10%;
+  border-radius: 10px;
+  height: 15%;
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px rgba(247, 247, 247, 0.801);
+          box-shadow: 0 0 3px rgba(247, 247, 247, 0.801);
+}
+
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,30 +251,39 @@ a:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 50px 5px;
-  margin: 35px 20px;
-  border-radius: 10px;
-  height: 170px;
-  background-color: #252424;
-  -webkit-box-shadow: 0 0 3px rgba(247, 247, 247, 0.801);
-          box-shadow: 0 0 3px rgba(247, 247, 247, 0.801);
+  height: 10%;
+}
+
+@media only screen and (max-width: 480px) {
+  .header {
+    height: 5%;
+  }
 }
 
 .category h1 {
+  width: 100%;
+  padding: 0 0 40px 0;
   font-family: monsterhunter;
   font-size: 4em;
+  text-align: center;
   color: #eee;
 }
 
 @media only screen and (max-width: 480px) {
   .category h1 {
-    padding-top: 10px;
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 749px) and (min-width: 481px) {
+  .category h1 {
     font-size: 2.5em;
   }
 }
 
 .category p, .category h2 {
   padding: 5px 10px;
+  height: 65px;
   text-align: center;
   color: #eee;
 }
@@ -272,12 +296,19 @@ a:hover,
   padding: 22px 10px;
 }
 
+@media only screen and (max-width: 480px) {
+  .category-description {
+    height: 210px;
+  }
+}
+
 .category-header img {
   width: 50px;
   height: 50px;
 }
 
 .poison {
+  height: 400px;
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #c08cc5;
           box-shadow: 0 0 3px #c08cc5;
@@ -292,5 +323,13 @@ a:hover,
 .build {
   display: -ms-grid;
   display: grid;
+  padding: 0px 25px;
+  height: 250px;
+}
+
+.build li {
+  height: 50px;
+  text-decoration: none;
+  list-style-type: none;
 }
 /*# sourceMappingURL=weapons.css.map */
