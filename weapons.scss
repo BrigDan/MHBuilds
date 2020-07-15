@@ -89,17 +89,17 @@ hr{
 }
 .poison{
     @include neonButton(rgb(37, 36, 36), rgb(192, 140, 197), 3px);
-    height: 400px
+    height: 450px
 }
 
 .thunder{
     @include neonButton(rgb(37, 36, 36), rgb(212, 201, 99), 3px);
-    height: 400px;
+    height: 450px;
 }
 
 .raw{
     @include neonButton(rgb(37, 36, 36), rgb(226, 231, 236), 3px);
-    height: 400px;   
+    height: 450px;   
 }
 
 

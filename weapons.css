@@ -337,21 +337,21 @@ hr {
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #c08cc5;
           box-shadow: 0 0 3px #c08cc5;
-  height: 400px;
+  height: 450px;
 }
 
 .thunder {
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #d4c963;
           box-shadow: 0 0 3px #d4c963;
-  height: 400px;
+  height: 450px;
 }
 
 .raw {
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #e2e7ec;
           box-shadow: 0 0 3px #e2e7ec;
-  height: 400px;
+  height: 450px;
 }
 
 .build {
