@@ -215,6 +215,34 @@ a:hover,
   }
 }
 
+.poison {
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px #c08cc5;
+          box-shadow: 0 0 3px #c08cc5;
+  height: 450px;
+}
+
+.thunder {
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px #d4c963;
+          box-shadow: 0 0 3px #d4c963;
+  height: 450px;
+}
+
+.raw {
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px #e2e7ec;
+          box-shadow: 0 0 3px #e2e7ec;
+  height: 450px;
+}
+
+.water {
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px #0d81f5;
+          box-shadow: 0 0 3px #0d81f5;
+  height: 450px;
+}
+
 .menu li a.selected {
   background-color: #2ba04e;
   -webkit-box-shadow: 0 0 0px #50fb6d;
@@ -333,6 +361,17 @@ hr {
   height: 1px;
 }
 
+.build {
+  text-align: center;
+  padding: 20px 25px 5px 25px;
+}
+
+.build li {
+  height: 50px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
 .poison {
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #c08cc5;
@@ -354,14 +393,24 @@ hr {
   height: 450px;
 }
 
-.build {
-  text-align: center;
-  padding: 20px 25px 5px 25px;
+.water {
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px #0d81f5;
+          box-shadow: 0 0 3px #0d81f5;
+  height: 450px;
 }
 
-.build li {
-  height: 50px;
-  text-decoration: none;
-  list-style-type: none;
+.ice {
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px #70d2ff;
+          box-shadow: 0 0 3px #70d2ff;
+  height: 450px;
+}
+
+.dragon {
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px #d363ca;
+          box-shadow: 0 0 3px #d363ca;
+  height: 450px;
 }
 /*# sourceMappingURL=weapons.css.map */
