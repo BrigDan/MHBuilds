@@ -1,37 +1,35 @@
 // Load Mixin Libraries for responsiveness and styling shortcuts
-@import 'modules/base';
-@import 'modules/mixins';
-@import 'modules/nav';
-@import 'modules/animations';
+@import 'modules/base'; // Repetitive elements between each website
+@import 'modules/mixins'; // Mixins used for centering
+@import 'modules/nav'; // Navbar elements
+@import 'modules/animations'; // Animation elements
 
-*{
-  height: 100%;
-}
-
+// For desktop devices make the navbar stay at the top, this works well for desktop but not mobile
 .hamburger{
   @include Responsive("Desktop") {
     position: fixed;
   }
 }
 
+// Fade in to give time for the image to load
 .header {
   @include fadein(3s);
 
   position: relative;
-  background: url(img/desktop-frontpage.jpg) no-repeat center fixed;
-  background-size: cover;
+  background: url(img/desktop-frontpage.jpg) no-repeat center fixed; //Fixed makes the website scroll over the background giving a nice responsive effect
+  background-size: cover; 
   height: 90vh;
   z-index: -2;
 
   // Make the header fit the whole viewport to obscure the text
   @include Responsive("Desktop") {
-    height: 100vh;
+    height: 100vh; //Take up the whole screen on desktop for viewing experience
   }
 }
 
+  /* Header text */
 .logo,
 .about {
-  /* Header text */
   @include centerObject(row);
   color: white;
   overflow: hidden;
@@ -39,8 +37,6 @@
 
 .about {
   @include centerObject(column);
-
-  justify-content: flex-start;
 
   @include Responsive("Mobile") {
     display: none;
@@ -57,15 +53,19 @@
   }
 }
 
+// Main Logo for the Website
 .logo-text {
   @include fadein(0s);
 
+  // Add drop shadow for readability
   filter: drop-shadow(1px 7px 2px #222);
+
   overflow: hidden;
   height: 130px;
   font-family: monsterhunter;
-  z-index: -1;
+  z-index: -1; // This is needed for the text to not appear over the hamburger menu
 
+  // Change font size depending on screen type
   @include Responsive("Mobile") {
     font-size: 3em;
   }
@@ -79,6 +79,7 @@
   }
 }
 
+// Paragraph text and header text for the about section
 .sub-text,
 .sub-text-para {
   width: 100%;
@@ -90,7 +91,7 @@
   padding: 25px 0px;
   height: 30%;
   text-shadow: 1px 1px #222;
-  z-index: -1;
+  z-index: -1; // Makes the text not appear above the hamburger menu
 
   @include Responsive("Tablet") {
     height: 35%;

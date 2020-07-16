@@ -7,7 +7,7 @@
 
 
 .menu li a.selected{
-    @include neonButton(rgb(43, 160, 78), rgb(80, 251, 109), 0px);
+    @include neonButton(rgb(43, 160, 78), rgb(80, 251, 109), 0px); // Mixin that creates a neon coloured backdrop
     opacity: 0.9;
 }
 
@@ -19,7 +19,7 @@ h1, h2{
     padding: 46px 0px;
     margin: 35px 20px;
     height: 10%;
-    border-radius: 10px;
+    border-radius: 10px; // Make container rounded
     height: 15%;
     @include neonButton(rgb(37, 36, 36), rgba(247, 247, 247, 0.801), 3px);
 }
@@ -72,7 +72,7 @@ h1, h2{
     height: 175px;
     @include Responsive("Mobile"){
         height: 210px;
-        padding: 10px 0 0 0 ;
+        padding: 10px 0 0 0 ; // Padding top, right, bottom, left
         font-size: 0.9em;
     }
     @include Responsive("Tablet"){
@@ -128,5 +128,10 @@ hr{
 
 .dragon{
     @include neonButton(rgb(37, 36, 36), rgb(211, 99, 202), 3px);
+    height: 450px;   
+}
+
+.fire{
+    @include neonButton(rgb(37, 36, 36), rgb(238, 59, 98), 3px);
     height: 450px;   
 }

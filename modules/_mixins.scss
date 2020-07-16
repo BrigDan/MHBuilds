@@ -1,7 +1,6 @@
+// Mixins.scss, for responsiveness and centering using flexbox and any presets for elements 
 
-// Mix-ins for responsiveness and centering using flexbox 
-
-/* Importing custom made webfont */
+/* Importing custom made webfont for project */
 @font-face {
   font-family: 'monsterhunter';
   src: url('fonts/monsterhunter-webfont.woff2') format('woff2'),
@@ -11,7 +10,6 @@
 
 }
 
-
 @mixin centerObject($dir) {
     display: flex;
     flex-direction: ($dir);
@@ -19,12 +17,14 @@
     justify-content: center;
   }
   
+  // Creates a pretty button used for menu elements and backgrounds of other containers, useful for making items stand out
   @mixin neonButton($backcol, $boxshadow, $boxwidth) {
     background-color: $backcol;
     box-shadow: 0 0 $boxwidth $boxshadow;
   }
   
-  
+
+  // Making media queries easier by using a mixin
   @mixin Responsive($type) {
   
     // Width Classification

@@ -1,24 +1,28 @@
+// NAV.SCSS, Navbar styling for the entire site, contains classes for the nav element and everything within it
+
 nav {
+  // Using flexbox to position all the elements within the navbar with ease
     display: flex;
-    width: 100%;
+    width: 100%; // Make the navbar 100% of the screen
     height: 55px;
     background: #222222;
   
     @include Responsive("HiDPI") {
-      height: 72px;
+      height: 72px;   // When testing on a hidpi screen the menu can be quite small so we make it bigger
     }
   }
-  
+
   .menu {
+    // We need a seperate container for the menu to line up the items within responsively.
     display: flex;
     flex-wrap: wrap;
-    text-decoration: none;
+    text-decoration: none; // Get rid of the dots on the list
     list-style-type: none;
     width: 100%;
   
     @include Responsive("Desktop") {
       @include centerObject(row);
-      flex-wrap: nowrap;
+      flex-wrap: nowrap; // Changes the bar from a dropdown to a straight line inside of the nav container
     }
   }
   
@@ -26,31 +30,31 @@ nav {
     @include centerObject(row);
     padding: 6px 0 6px 0;
     width: 100%;
-    opacity: 0.2;
-    transition: transform .2s;
+    opacity: 0.2; // Default icons 
+    transition: transform .2s; // For the zoom in on hover (Desktop Only)
     /* Animation */
     transition: 0.4s;
+
+    @include Responsive("Mobile"){
+      opacity: 0.9; // Change amount of opacity for mobile
+    }
   }
   
-  // Don't gray out icons on mobile
-  .menu .active{
-    opacity: 1;
-  }
-
   .menu li a:hover {
     @include neonButton(rgb(77, 214, 100), rgb(80, 251, 109), 10px);
   
     @include Responsive("Desktop") {
-      transform: scale(1.2);
+      transform: scale(1.2); // Zoom effect for hover
     }
-  
     opacity: 1;
   }
   
+
+  // Hamburger icon
   .toggle,
   .toggle i {
     flex: 1;
-    order: 1;
+    order: 1; //Makes sure its the first thing in the element 
     flex: 0 0 100%;
     /* flex-grow, flex-shrink, flex-basis */
     padding: 0px 85% 0px 0px;
