@@ -150,8 +150,8 @@ nav {
 }
 
 a {
-  -webkit-text-decoration-color: #eee;
-          text-decoration-color: #eee;
+  -webkit-text-decoration-color: none;
+          text-decoration-color: none;
 }
 
 .home a:hover {
