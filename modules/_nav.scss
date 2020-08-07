@@ -25,6 +25,40 @@ nav {
       flex-wrap: nowrap; // Changes the bar from a dropdown to a straight line inside of the nav container
     }
   }
+
+  .home{
+    // Styling for the home button which will just the the text for the website
+    padding: 10px 15px;
+    display:block;
+    color: #eee;
+    font-family: monsterhunter;
+    text-decoration: none;
+    font-size: 1.8em;
+
+    transition: transform .2s; // For the zoom in on hover (Desktop Only)
+    /* Animation */
+    transition: 0.4s;
+
+    @include Responsive("Mobile"){
+      opacity: 0.9; // Change amount of opacity for mobile
+      position: absolute;
+      left: 50%;
+      top: 0.8%;
+      height: 8%;
+      transform: translate(-50%, 0);
+    }
+
+    @include Responsive("Tablet"){
+      opacity: 0.9; // Change amount of opacity for mobile
+      position: absolute;
+      left: 50%;
+      top: 0.8%;
+      height: 8%;
+      transform: translate(-50%, 0);
+    }
+
+
+  }
   
   .menu li a {
     @include centerObject(row);
@@ -48,6 +82,18 @@ nav {
     }
     opacity: 1;
   }
+
+  .home a:hover{
+    @include Responsive("Desktop") {
+      transform: scale(1.2); // Zoom effect for hover
+    }
+    opacity: 1;
+  }
+
+  .home:hover{
+    @include neonButton(rgb(77, 114, 214), rgb(111, 95, 204), 10px);
+
+  }
   
 
   // Hamburger icon
@@ -57,7 +103,7 @@ nav {
     order: 1; //Makes sure its the first thing in the element 
     flex: 0 0 100%;
     /* flex-grow, flex-shrink, flex-basis */
-    padding: 0px 85% 0px 0px;
+    padding: 0px 80% 0px 0px;
     font-size: 20px;
     color: #eee;
   

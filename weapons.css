@@ -1,4 +1,4 @@
-/* Importing custom made webfont */
+/* Importing custom made webfont for project */
 @font-face {
   font-family: 'monsterhunter';
   src: url("fonts/monsterhunter-webfont.woff2") format("woff2"), url("fonts/monsterhunter-webfont.woff") format("woff");
@@ -64,6 +64,46 @@ nav {
   }
 }
 
+.home {
+  padding: 10px 15px;
+  display: block;
+  color: #eee;
+  font-family: monsterhunter;
+  text-decoration: none;
+  font-size: 1.8em;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  /* Animation */
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+@media only screen and (max-width: 480px) {
+  .home {
+    opacity: 0.9;
+    position: absolute;
+    left: 50%;
+    top: 0.8%;
+    height: 8%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+@media only screen and (max-width: 749px) and (min-width: 481px) {
+  .home {
+    opacity: 0.9;
+    position: absolute;
+    left: 50%;
+    top: 0.8%;
+    height: 8%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
 .menu li a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,8 +130,10 @@ nav {
   transition: 0.4s;
 }
 
-.menu .active {
-  opacity: 1;
+@media only screen and (max-width: 480px) {
+  .menu li a {
+    opacity: 0.9;
+  }
 }
 
 .menu li a:hover {
@@ -108,6 +150,23 @@ nav {
   }
 }
 
+.home a:hover {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 750px) {
+  .home a:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+.home:hover {
+  background-color: #4d72d6;
+  -webkit-box-shadow: 0 0 10px #6f5fcc;
+          box-shadow: 0 0 10px #6f5fcc;
+}
+
 .toggle,
 .toggle i {
   -webkit-box-flex: 1;
@@ -120,7 +179,7 @@ nav {
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
   /* flex-grow, flex-shrink, flex-basis */
-  padding: 0px 85% 0px 0px;
+  padding: 0px 80% 0px 0px;
   font-size: 20px;
   color: #eee;
 }
@@ -213,34 +272,6 @@ a:hover,
   100% {
     opacity: 1;
   }
-}
-
-.poison {
-  background-color: #252424;
-  -webkit-box-shadow: 0 0 3px #c08cc5;
-          box-shadow: 0 0 3px #c08cc5;
-  height: 450px;
-}
-
-.thunder {
-  background-color: #252424;
-  -webkit-box-shadow: 0 0 3px #d4c963;
-          box-shadow: 0 0 3px #d4c963;
-  height: 450px;
-}
-
-.raw {
-  background-color: #252424;
-  -webkit-box-shadow: 0 0 3px #e2e7ec;
-          box-shadow: 0 0 3px #e2e7ec;
-  height: 450px;
-}
-
-.water {
-  background-color: #252424;
-  -webkit-box-shadow: 0 0 3px #0d81f5;
-          box-shadow: 0 0 3px #0d81f5;
-  height: 450px;
 }
 
 .menu li a.selected {
@@ -411,6 +442,13 @@ hr {
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #d363ca;
           box-shadow: 0 0 3px #d363ca;
+  height: 450px;
+}
+
+.fire {
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px #ee3b62;
+          box-shadow: 0 0 3px #ee3b62;
   height: 450px;
 }
 /*# sourceMappingURL=weapons.css.map */

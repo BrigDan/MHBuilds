@@ -52,12 +52,6 @@
       }
     }
   
-    @else if $type==width {
-      @media only screen and (min-width: 620px) {
-        @content;
-      }
-    }
-  
     // Height Classification
     @if $type==height {
       @media only screen and (min-height: 820px) {
