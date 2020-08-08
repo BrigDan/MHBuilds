@@ -445,6 +445,7 @@ hr {
 @media only screen and (max-width: 480px) {
   .build li {
     font-size: 0.9em;
+    width: 11rem;
   }
 }
 
