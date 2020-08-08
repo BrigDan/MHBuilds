@@ -16,10 +16,14 @@ h1, h2{
 
 .category{
     padding: 46px 0px;
-    margin: 35px 20px;
+    margin: 35px 8em;
     height: 450px;
     border-radius: 10px; // Make container rounded
     @include neonButton(rgb(37, 36, 36), rgba(247, 247, 247, 0.801), 3px);
+
+    @include Responsive("Mobile"){
+        margin: 35px 1em;
+    }
 }
 
 .header{
