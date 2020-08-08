@@ -291,9 +291,8 @@ h1, h2 {
 .category {
   padding: 46px 0px;
   margin: 35px 20px;
-  height: 10%;
+  height: 450px;
   border-radius: 10px;
-  height: 15%;
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px rgba(247, 247, 247, 0.801);
           box-shadow: 0 0 3px rgba(247, 247, 247, 0.801);
@@ -368,7 +367,7 @@ h1, h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 22px 10px;
-  height: 175px;
+  height: 180px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -396,62 +395,124 @@ hr {
 }
 
 .build {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
-  padding: 20px 25px 5px 25px;
 }
 
 .build li {
-  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1em;
+  width: 13rem;
+  height: auto;
   text-decoration: none;
   list-style-type: none;
+  border-style: solid;
+  padding: 9px 5px 3px 5px;
+  border-width: 1px;
+  background-color: rgba(194, 57, 57, 0.931);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 749px) and (min-width: 481px) {
+  .build li {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .build li {
+    font-size: 0.9em;
+  }
+}
+
+.build ul {
+  height: 85%;
+  width: 100%;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.armor-icon {
+  width: 25px;
+  height: auto;
 }
 
 .poison {
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #c08cc5;
           box-shadow: 0 0 3px #c08cc5;
-  height: 450px;
 }
 
 .thunder {
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #d4c963;
           box-shadow: 0 0 3px #d4c963;
-  height: 450px;
 }
 
 .raw {
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #e2e7ec;
           box-shadow: 0 0 3px #e2e7ec;
-  height: 450px;
 }
 
 .water {
   background-color: #252424;
-  -webkit-box-shadow: 0 0 3px #0d81f5;
-          box-shadow: 0 0 3px #0d81f5;
-  height: 450px;
+  -webkit-box-shadow: 0 0 3px #53d5ec;
+          box-shadow: 0 0 3px #53d5ec;
 }
 
 .ice {
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #70d2ff;
           box-shadow: 0 0 3px #70d2ff;
-  height: 450px;
 }
 
 .dragon {
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #d363ca;
           box-shadow: 0 0 3px #d363ca;
-  height: 450px;
 }
 
 .fire {
   background-color: #252424;
   -webkit-box-shadow: 0 0 3px #ee3b62;
           box-shadow: 0 0 3px #ee3b62;
-  height: 450px;
+}
+
+.blast {
+  background-color: #252424;
+  -webkit-box-shadow: 0 0 3px #fff677;
+          box-shadow: 0 0 3px #fff677;
 }
 /*# sourceMappingURL=weapons.css.map */

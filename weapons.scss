@@ -17,9 +17,8 @@ h1, h2{
 .category{
     padding: 46px 0px;
     margin: 35px 20px;
-    height: 10%;
+    height: 450px;
     border-radius: 10px; // Make container rounded
-    height: 15%;
     @include neonButton(rgb(37, 36, 36), rgba(247, 247, 247, 0.801), 3px);
 }
 
@@ -68,7 +67,7 @@ h1, h2{
 .category-description{
     flex-direction: column;
     padding: 22px 10px;
-    height: 175px;
+    height: 180px;
     @include Responsive("Mobile"){
         height: 210px;
         padding: 10px 0 0 0 ; // Padding top, right, bottom, left
@@ -89,48 +88,75 @@ hr{
 }
 
 .build{
+    display: flex;
     text-align: center;
-    padding: 20px 25px 5px 25px;
 }
+
 .build li{
-    height: 50px;
+    @include centerObject(row);
+    font-size: 1em;
+    width: 13rem;
+    height: auto;
     text-decoration: none;
     list-style-type: none;
+    border-style: solid;
+	padding: 9px 5px 3px 5px;
+    border-width: 1px;
+    background-color: rgba(194, 57, 57, 0.931);
+    justify-content: space-between;
+
+    @include Responsive("Tablet"){
+        font-size: 1em;
+    }
+
+    @include Responsive("Mobile"){
+        font-size: 0.9em;
+    }
+}
+
+.build ul{
+    height: 85%;
+    width: 100%;
+    padding: 10px 0;
+    @include centerObject(column);
+    justify-content: space-evenly;
+}
+
+.armor-icon {
+    width: 25px;
+	height: auto;
 }
 
 // Element colours for boxes
 
 .poison{
     @include neonButton(rgb(37, 36, 36), rgb(192, 140, 197), 3px);
-    height: 450px
 }
 
 .thunder{
     @include neonButton(rgb(37, 36, 36), rgb(212, 201, 99), 3px);
-    height: 450px;
 }
 
 .raw{
     @include neonButton(rgb(37, 36, 36), rgb(226, 231, 236), 3px);
-    height: 450px;   
 }
 
 .water{
-    @include neonButton(rgb(37, 36, 36), rgb(13, 129, 245), 3px);
-    height: 450px;   
+    @include neonButton(rgb(37, 36, 36), rgb(83, 213, 236), 3px);
 }
 
 .ice{
     @include neonButton(rgb(37, 36, 36), rgb(112, 210, 255), 3px);
-    height: 450px;   
 }
 
 .dragon{
     @include neonButton(rgb(37, 36, 36), rgb(211, 99, 202), 3px);
-    height: 450px;   
 }
 
 .fire{
     @include neonButton(rgb(37, 36, 36), rgb(238, 59, 98), 3px);
-    height: 450px;   
+}
+
+.blast{
+    @include neonButton(rgb(37, 36, 36), rgb(255, 246, 119), 3px);
 }
